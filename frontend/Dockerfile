@@ -16,6 +16,10 @@ COPY . .
 
 RUN npm run build
 
+# Accept build argument 
+ARG VITE_API_URL 
+ENV VITE_API_URL=$VITE_API_URL
+
 # Serving the built files (multi-stage build)
 FROM nginx:alpine 
 COPY --from=0 /app/dist /usr/share/nginx/html
