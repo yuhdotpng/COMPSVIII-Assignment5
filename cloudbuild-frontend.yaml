@@ -4,7 +4,7 @@ steps:
     args: 
       - 'build' 
       - '--build-arg'
-      - 'VITE_API_URL=https://https://recipe-backend-83241429843.us-central1.run.app'
+      - 'VITE_API_URL=https://https://recipe-backend-83241429843.us-central1.run.app/api.recipes'
       - '-t'
       - 'gcr.io/$PROJECT_ID/recipe-frontend' 
       - './frontend'
