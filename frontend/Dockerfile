@@ -14,11 +14,11 @@ RUN npm ci
 # Copy application code
 COPY . .
 
-RUN npm run build
-
 # Accept build argument 
 ARG VITE_API_URL 
 ENV VITE_API_URL=$VITE_API_URL
+
+RUN npm run build
 
 # Serving the built files (multi-stage build)
 FROM nginx:alpine 
